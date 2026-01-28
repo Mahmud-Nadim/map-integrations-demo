@@ -1,0 +1,494 @@
+{
+  "shipments": [
+    {
+      "id": "PC2025102557",
+      "type": "sea",
+      "status": "IN_TRANSIT",
+      "shipper": "Bangor Shipping",
+      "customer": "MONOPACK LTD",
+      "route": {
+        "origin": "Shanghai",
+        "destination": "Rotterdam"
+      },
+      "vessel": {
+        "name": "Ever Given",
+        "imo_number": "9811000",
+        "carrier_code": "EGLV"
+      },
+      "container": {
+        "reference": "EISU1234567",
+        "type": "40HC",
+        "bill_of_lading": "EGLV123456789"
+      },
+      "dates": {
+        "etd": "2025-01-15T08:00:00Z",
+        "eta": "2025-02-12T14:00:00Z",
+        "actual_departure": "2025-01-15T10:30:00Z"
+      },
+      "progress": 45,
+      "positions": {
+        "historical": [
+          { "lat": 31.2304, "lng": 121.4737, "timestamp": "2025-01-15T10:30:00Z", "location": "Shanghai Port" },
+          { "lat": 29.8683, "lng": 121.5440, "timestamp": "2025-01-16T08:00:00Z", "location": "East China Sea" },
+          { "lat": 25.0330, "lng": 119.3000, "timestamp": "2025-01-17T12:00:00Z", "location": "Taiwan Strait" },
+          { "lat": 21.2720, "lng": 115.9600, "timestamp": "2025-01-18T18:00:00Z", "location": "South China Sea" },
+          { "lat": 14.5995, "lng": 113.4000, "timestamp": "2025-01-20T06:00:00Z", "location": "South China Sea" },
+          { "lat": 8.5000, "lng": 109.0000, "timestamp": "2025-01-21T14:00:00Z", "location": "South China Sea" },
+          { "lat": 4.2105, "lng": 104.5000, "timestamp": "2025-01-23T08:00:00Z", "location": "Malacca Strait" },
+          { "lat": 1.3521, "lng": 103.8198, "timestamp": "2025-01-24T12:00:00Z", "location": "Singapore" }
+        ],
+        "current": {
+          "lat": 5.4164,
+          "lng": 80.0000,
+          "timestamp": "2025-01-28T10:00:00Z",
+          "location": "Indian Ocean",
+          "speed_knots": 18.5,
+          "heading": 285
+        },
+        "predicted": [
+          { "lat": 10.5000, "lng": 60.0000, "timestamp": "2025-01-31T12:00:00Z", "location": "Arabian Sea" },
+          { "lat": 12.8628, "lng": 45.0368, "timestamp": "2025-02-03T08:00:00Z", "location": "Gulf of Aden" },
+          { "lat": 15.6000, "lng": 41.5000, "timestamp": "2025-02-04T18:00:00Z", "location": "Red Sea" },
+          { "lat": 30.0444, "lng": 32.4000, "timestamp": "2025-02-06T12:00:00Z", "location": "Suez Canal" },
+          { "lat": 35.5000, "lng": 24.0000, "timestamp": "2025-02-08T06:00:00Z", "location": "Mediterranean Sea" },
+          { "lat": 36.7000, "lng": 5.0000, "timestamp": "2025-02-10T14:00:00Z", "location": "Gibraltar Strait" },
+          { "lat": 51.9244, "lng": 4.4777, "timestamp": "2025-02-12T14:00:00Z", "location": "Rotterdam Port" }
+        ]
+      },
+      "events": [
+        {
+          "event_id": "evt-001",
+          "event_type": "EQUIPMENT",
+          "event_datetime": "2025-01-15T10:30:00Z",
+          "event_description": "Vessel departed from Shanghai Port",
+          "location": "Shanghai, CN",
+          "status": "completed"
+        },
+        {
+          "event_id": "evt-002",
+          "event_type": "TRANSPORT",
+          "event_datetime": "2025-01-24T12:00:00Z",
+          "event_description": "Transited Singapore Strait",
+          "location": "Singapore",
+          "status": "completed"
+        },
+        {
+          "event_id": "evt-003",
+          "event_type": "TRANSPORT",
+          "event_datetime": "2025-02-06T12:00:00Z",
+          "event_description": "Expected Suez Canal transit",
+          "location": "Suez, EG",
+          "status": "pending"
+        },
+        {
+          "event_id": "evt-004",
+          "event_type": "EQUIPMENT",
+          "event_datetime": "2025-02-12T14:00:00Z",
+          "event_description": "Expected arrival at Rotterdam",
+          "location": "Rotterdam, NL",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PC2025102558",
+      "type": "air",
+      "status": "SCHEDULED",
+      "shipper": "Pacific Freight",
+      "customer": "TECHLOGIX INC",
+      "route": {
+        "origin": "Tokyo Haneda",
+        "destination": "London Heathrow"
+      },
+      "flight": {
+        "number": "BA3949",
+        "carrier": "British Airways",
+        "aircraft": "Boeing 777-300ER"
+      },
+      "cargo": {
+        "awb": "125-12345678",
+        "pieces": 45,
+        "weight_kg": 2450,
+        "description": "Electronic Components"
+      },
+      "dates": {
+        "etd": "2025-01-29T21:25:00Z",
+        "eta": "2025-01-30T04:50:00Z"
+      },
+      "progress": 0,
+      "positions": {
+        "origin": {
+          "lat": 35.5494,
+          "lng": 139.7798,
+          "airport_code": "HND",
+          "airport_name": "Tokyo Haneda International Airport",
+          "city": "Tokyo",
+          "country": "Japan"
+        },
+        "destination": {
+          "lat": 51.4700,
+          "lng": -0.4543,
+          "airport_code": "LHR",
+          "airport_name": "London Heathrow Airport",
+          "city": "London",
+          "country": "United Kingdom"
+        }
+      }
+    },
+    {
+      "id": "PC2025102559",
+      "type": "sea",
+      "status": "IN_TRANSIT",
+      "shipper": "Oceanic Logistics",
+      "customer": "GLOBAL TRADE CO",
+      "route": {
+        "origin": "Hong Kong",
+        "destination": "London Gateway"
+      },
+      "vessel": {
+        "name": "Maersk Honam",
+        "imo_number": "9784277",
+        "carrier_code": "MAEU"
+      },
+      "container": {
+        "reference": "MSKU7654321",
+        "type": "20GP",
+        "bill_of_lading": "MAEU987654321"
+      },
+      "dates": {
+        "etd": "2025-01-10T06:00:00Z",
+        "eta": "2025-02-08T18:00:00Z",
+        "actual_departure": "2025-01-10T07:15:00Z"
+      },
+      "progress": 65,
+      "positions": {
+        "historical": [
+          { "lat": 22.3193, "lng": 114.1694, "timestamp": "2025-01-10T07:15:00Z", "location": "Hong Kong Port" },
+          { "lat": 20.0000, "lng": 112.5000, "timestamp": "2025-01-11T12:00:00Z", "location": "South China Sea" },
+          { "lat": 10.8231, "lng": 106.6297, "timestamp": "2025-01-13T08:00:00Z", "location": "Ho Chi Minh City" },
+          { "lat": 1.3521, "lng": 103.8198, "timestamp": "2025-01-16T14:00:00Z", "location": "Singapore" },
+          { "lat": 6.0000, "lng": 80.0000, "timestamp": "2025-01-20T10:00:00Z", "location": "Sri Lanka" },
+          { "lat": 12.8628, "lng": 45.0368, "timestamp": "2025-01-24T18:00:00Z", "location": "Gulf of Aden" }
+        ],
+        "current": {
+          "lat": 20.5000,
+          "lng": 38.5000,
+          "timestamp": "2025-01-28T08:00:00Z",
+          "location": "Red Sea",
+          "speed_knots": 17.2,
+          "heading": 340
+        },
+        "predicted": [
+          { "lat": 30.0444, "lng": 32.4000, "timestamp": "2025-01-30T06:00:00Z", "location": "Suez Canal" },
+          { "lat": 35.5000, "lng": 24.0000, "timestamp": "2025-02-01T12:00:00Z", "location": "Mediterranean Sea" },
+          { "lat": 36.7000, "lng": 5.0000, "timestamp": "2025-02-03T08:00:00Z", "location": "Gibraltar Strait" },
+          { "lat": 43.5000, "lng": -8.0000, "timestamp": "2025-02-05T14:00:00Z", "location": "Bay of Biscay" },
+          { "lat": 51.4500, "lng": 0.9500, "timestamp": "2025-02-08T18:00:00Z", "location": "London Gateway Port" }
+        ]
+      },
+      "events": [
+        {
+          "event_id": "evt-101",
+          "event_type": "EQUIPMENT",
+          "event_datetime": "2025-01-10T07:15:00Z",
+          "event_description": "Container loaded, vessel departed",
+          "location": "Hong Kong",
+          "status": "completed"
+        },
+        {
+          "event_id": "evt-102",
+          "event_type": "TRANSPORT",
+          "event_datetime": "2025-01-16T14:00:00Z",
+          "event_description": "Transited Singapore",
+          "location": "Singapore",
+          "status": "completed"
+        },
+        {
+          "event_id": "evt-103",
+          "event_type": "TRANSPORT",
+          "event_datetime": "2025-01-24T18:00:00Z",
+          "event_description": "Passed Gulf of Aden",
+          "location": "Gulf of Aden",
+          "status": "completed"
+        },
+        {
+          "event_id": "evt-104",
+          "event_type": "TRANSPORT",
+          "event_datetime": "2025-01-30T06:00:00Z",
+          "event_description": "Expected Suez Canal transit",
+          "location": "Suez, EG",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PC2025102560",
+      "type": "air",
+      "status": "IN_TRANSIT",
+      "shipper": "Global Freight",
+      "customer": "PHARMA SOLUTIONS",
+      "route": {
+        "origin": "Frankfurt",
+        "destination": "Singapore Changi"
+      },
+      "flight": {
+        "number": "SQ327",
+        "carrier": "Singapore Airlines",
+        "aircraft": "Airbus A350-900"
+      },
+      "cargo": {
+        "awb": "618-98765432",
+        "pieces": 28,
+        "weight_kg": 1850,
+        "description": "Pharmaceutical Products - Temperature Controlled"
+      },
+      "dates": {
+        "etd": "2025-01-28T14:30:00Z",
+        "eta": "2025-01-29T08:15:00Z"
+      },
+      "progress": 70,
+      "positions": {
+        "origin": {
+          "lat": 50.0379,
+          "lng": 8.5622,
+          "airport_code": "FRA",
+          "airport_name": "Frankfurt Airport",
+          "city": "Frankfurt",
+          "country": "Germany"
+        },
+        "destination": {
+          "lat": 1.3644,
+          "lng": 103.9915,
+          "airport_code": "SIN",
+          "airport_name": "Singapore Changi Airport",
+          "city": "Singapore",
+          "country": "Singapore"
+        }
+      }
+    },
+    {
+      "id": "PC2025102561",
+      "type": "sea",
+      "status": "IN_TRANSIT",
+      "shipper": "Atlantic Carriers",
+      "customer": "AUTO PARTS INTL",
+      "route": {
+        "origin": "Los Angeles",
+        "destination": "Yokohama"
+      },
+      "vessel": {
+        "name": "CMA CGM Marco Polo",
+        "imo_number": "9454436",
+        "carrier_code": "CMDU"
+      },
+      "container": {
+        "reference": "CMAU9876543",
+        "type": "40GP",
+        "bill_of_lading": "CMDU456789012"
+      },
+      "dates": {
+        "etd": "2025-01-20T16:00:00Z",
+        "eta": "2025-02-05T09:00:00Z",
+        "actual_departure": "2025-01-20T17:30:00Z"
+      },
+      "progress": 52,
+      "positions": {
+        "historical": [
+          { "lat": 33.7395, "lng": -118.2611, "timestamp": "2025-01-20T17:30:00Z", "location": "Port of Los Angeles" },
+          { "lat": 32.5000, "lng": -125.0000, "timestamp": "2025-01-21T14:00:00Z", "location": "Pacific Ocean" },
+          { "lat": 30.0000, "lng": -135.0000, "timestamp": "2025-01-23T08:00:00Z", "location": "Pacific Ocean" },
+          { "lat": 28.5000, "lng": -145.0000, "timestamp": "2025-01-25T06:00:00Z", "location": "Pacific Ocean" }
+        ],
+        "current": {
+          "lat": 30.0000,
+          "lng": -160.0000,
+          "timestamp": "2025-01-28T12:00:00Z",
+          "location": "Central Pacific Ocean",
+          "speed_knots": 20.1,
+          "heading": 275
+        },
+        "predicted": [
+          { "lat": 32.0000, "lng": -175.0000, "timestamp": "2025-01-30T08:00:00Z", "location": "Pacific Ocean" },
+          { "lat": 33.5000, "lng": 170.0000, "timestamp": "2025-02-01T14:00:00Z", "location": "Pacific Ocean" },
+          { "lat": 34.5000, "lng": 155.0000, "timestamp": "2025-02-03T10:00:00Z", "location": "Pacific Ocean" },
+          { "lat": 35.4437, "lng": 139.6380, "timestamp": "2025-02-05T09:00:00Z", "location": "Yokohama Port" }
+        ]
+      },
+      "events": [
+        {
+          "event_id": "evt-201",
+          "event_type": "EQUIPMENT",
+          "event_datetime": "2025-01-20T17:30:00Z",
+          "event_description": "Departed Los Angeles",
+          "location": "Los Angeles, US",
+          "status": "completed"
+        },
+        {
+          "event_id": "evt-202",
+          "event_type": "TRANSPORT",
+          "event_datetime": "2025-02-05T09:00:00Z",
+          "event_description": "Expected arrival at Yokohama",
+          "location": "Yokohama, JP",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "PC2025102562",
+      "type": "air",
+      "status": "DELIVERED",
+      "shipper": "Express Air Cargo",
+      "customer": "FASHION RETAIL GROUP",
+      "route": {
+        "origin": "Milan Malpensa",
+        "destination": "New York JFK"
+      },
+      "flight": {
+        "number": "AZ608",
+        "carrier": "ITA Airways",
+        "aircraft": "Airbus A330-200"
+      },
+      "cargo": {
+        "awb": "055-11223344",
+        "pieces": 120,
+        "weight_kg": 3200,
+        "description": "Fashion Apparel - High Value"
+      },
+      "dates": {
+        "etd": "2025-01-26T10:15:00Z",
+        "eta": "2025-01-26T14:30:00Z",
+        "actual_arrival": "2025-01-26T14:22:00Z"
+      },
+      "progress": 100,
+      "positions": {
+        "origin": {
+          "lat": 45.6306,
+          "lng": 8.7281,
+          "airport_code": "MXP",
+          "airport_name": "Milan Malpensa Airport",
+          "city": "Milan",
+          "country": "Italy"
+        },
+        "destination": {
+          "lat": 40.6413,
+          "lng": -73.7781,
+          "airport_code": "JFK",
+          "airport_name": "John F. Kennedy International Airport",
+          "city": "New York",
+          "country": "United States"
+        }
+      }
+    },
+    {
+      "id": "PC2025102563",
+      "type": "sea",
+      "status": "ARRIVED",
+      "shipper": "Nordic Shipping",
+      "customer": "FURNITURE WORLD",
+      "route": {
+        "origin": "Gothenburg",
+        "destination": "Boston"
+      },
+      "vessel": {
+        "name": "Atlantic Star",
+        "imo_number": "9321483",
+        "carrier_code": "ATLS"
+      },
+      "container": {
+        "reference": "ATLU5432198",
+        "type": "40HC",
+        "bill_of_lading": "ATLS789012345"
+      },
+      "dates": {
+        "etd": "2025-01-05T14:00:00Z",
+        "eta": "2025-01-25T08:00:00Z",
+        "actual_departure": "2025-01-05T15:30:00Z",
+        "actual_arrival": "2025-01-25T07:45:00Z"
+      },
+      "progress": 100,
+      "positions": {
+        "historical": [
+          { "lat": 57.7089, "lng": 11.9746, "timestamp": "2025-01-05T15:30:00Z", "location": "Gothenburg Port" },
+          { "lat": 56.0000, "lng": 6.0000, "timestamp": "2025-01-07T10:00:00Z", "location": "North Sea" },
+          { "lat": 52.0000, "lng": -5.0000, "timestamp": "2025-01-09T14:00:00Z", "location": "English Channel" },
+          { "lat": 50.0000, "lng": -20.0000, "timestamp": "2025-01-12T08:00:00Z", "location": "North Atlantic" },
+          { "lat": 45.0000, "lng": -40.0000, "timestamp": "2025-01-16T12:00:00Z", "location": "North Atlantic" },
+          { "lat": 42.0000, "lng": -60.0000, "timestamp": "2025-01-20T18:00:00Z", "location": "North Atlantic" },
+          { "lat": 42.3601, "lng": -71.0589, "timestamp": "2025-01-25T07:45:00Z", "location": "Boston Port" }
+        ],
+        "current": {
+          "lat": 42.3601,
+          "lng": -71.0589,
+          "timestamp": "2025-01-25T07:45:00Z",
+          "location": "Boston Port",
+          "speed_knots": 0,
+          "heading": 0
+        },
+        "predicted": []
+      },
+      "events": [
+        {
+          "event_id": "evt-301",
+          "event_type": "EQUIPMENT",
+          "event_datetime": "2025-01-05T15:30:00Z",
+          "event_description": "Departed Gothenburg",
+          "location": "Gothenburg, SE",
+          "status": "completed"
+        },
+        {
+          "event_id": "evt-302",
+          "event_type": "TRANSPORT",
+          "event_datetime": "2025-01-25T07:45:00Z",
+          "event_description": "Arrived at Boston",
+          "location": "Boston, US",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "id": "PC2025102564",
+      "type": "air",
+      "status": "IN_TRANSIT",
+      "shipper": "Asia Pacific Express",
+      "customer": "ELECTRONICS HUB",
+      "route": {
+        "origin": "Seoul Incheon",
+        "destination": "Dubai International"
+      },
+      "flight": {
+        "number": "EK323",
+        "carrier": "Emirates",
+        "aircraft": "Boeing 777-F"
+      },
+      "cargo": {
+        "awb": "176-55667788",
+        "pieces": 85,
+        "weight_kg": 5600,
+        "description": "Consumer Electronics - Lithium Battery"
+      },
+      "dates": {
+        "etd": "2025-01-28T02:30:00Z",
+        "eta": "2025-01-28T08:45:00Z"
+      },
+      "progress": 85,
+      "positions": {
+        "origin": {
+          "lat": 37.4602,
+          "lng": 126.4407,
+          "airport_code": "ICN",
+          "airport_name": "Incheon International Airport",
+          "city": "Seoul",
+          "country": "South Korea"
+        },
+        "destination": {
+          "lat": 25.2532,
+          "lng": 55.3657,
+          "airport_code": "DXB",
+          "airport_name": "Dubai International Airport",
+          "city": "Dubai",
+          "country": "United Arab Emirates"
+        }
+      }
+    }
+  ]
+}
