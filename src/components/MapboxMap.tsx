@@ -107,6 +107,7 @@ export default function MapboxMap({ shipments, selectedShipment }: MapboxMapProp
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markersRef = useRef<mapboxgl.Marker[]>([]);
+  const currentBoundsRef = useRef<mapboxgl.LngLatBounds | null>(null);
 
   // Initialize map
   useEffect(() => {
@@ -132,6 +133,33 @@ export default function MapboxMap({ shipments, selectedShipment }: MapboxMapProp
         mapRef.current.remove();
         mapRef.current = null;
       }
+    };
+  }, []);
+
+  // Handle container resize - re-center map when details pane opens/closes
+  useEffect(() => {
+    if (!mapContainerRef.current || !mapRef.current) return;
+
+    const resizeObserver = new ResizeObserver(() => {
+      if (mapRef.current) {
+        // Notify Mapbox that the container size changed
+        mapRef.current.resize();
+
+        // Re-fit bounds if we have them stored, to keep content centered
+        if (currentBoundsRef.current) {
+          mapRef.current.fitBounds(currentBoundsRef.current, {
+            padding: 60,
+            maxZoom: 6,
+            duration: 300
+          });
+        }
+      }
+    });
+
+    resizeObserver.observe(mapContainerRef.current);
+
+    return () => {
+      resizeObserver.disconnect();
     };
   }, []);
 
@@ -310,6 +338,7 @@ export default function MapboxMap({ shipments, selectedShipment }: MapboxMapProp
     if (allCoords.length > 0) {
       const bounds = new mapboxgl.LngLatBounds();
       allCoords.forEach(coord => bounds.extend(coord as [number, number]));
+      currentBoundsRef.current = bounds;
       map.fitBounds(bounds, { padding: 60, maxZoom: 6 });
     }
   };
@@ -408,6 +437,7 @@ export default function MapboxMap({ shipments, selectedShipment }: MapboxMapProp
     const bounds = new mapboxgl.LngLatBounds()
       .extend([origin.lng, origin.lat])
       .extend([destination.lng, destination.lat]);
+    currentBoundsRef.current = bounds;
     map.fitBounds(bounds, { padding: 80, maxZoom: 5 });
   };
 
@@ -467,7 +497,8 @@ export default function MapboxMap({ shipments, selectedShipment }: MapboxMapProp
       }
     });
 
-    // Reset view
+    // Reset view and clear bounds
+    currentBoundsRef.current = null;
     map.flyTo({ center: [10, 25], zoom: 1.5 });
   };
 
