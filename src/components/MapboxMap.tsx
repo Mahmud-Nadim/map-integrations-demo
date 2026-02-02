@@ -138,10 +138,18 @@ export default function MapboxMap({ shipments, selectedShipment }: MapboxMapProp
     };
   }, []);
 
-  // Update projection when toggled
+  // Update projection when toggled, preserving current view state
   useEffect(() => {
     if (mapRef.current) {
+      const center = mapRef.current.getCenter();
+      const zoom = mapRef.current.getZoom();
+      const bearing = mapRef.current.getBearing();
+      const pitch = mapRef.current.getPitch();
+
       mapRef.current.setProjection(projection);
+
+      // Restore the view state after projection change
+      mapRef.current.jumpTo({ center, zoom, bearing, pitch });
     }
   }, [projection]);
 
@@ -551,7 +559,7 @@ export default function MapboxMap({ shipments, selectedShipment }: MapboxMapProp
       )}
 
       {/* Globe / Flat toggle */}
-      <div className="absolute top-4 right-14 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 flex overflow-hidden">
+      <div className="absolute bottom-12 right-4 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-100 flex overflow-hidden z-10">
         <button
           onClick={() => setProjection('globe')}
           className={`flex items-center gap-1.5 px-3 py-2 text-xs font-medium transition-all duration-200 ${
