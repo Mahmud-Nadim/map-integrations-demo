@@ -88,17 +88,17 @@ export default function MapboxDashboard() {
             shipments={shipments}
             selectedShipment={selectedShipment}
           />
-        </div>
 
-        {/* Right Panel - Details */}
-        {selectedShipment && (
-          <div className="w-[420px] flex-shrink-0 border-l border-gray-200 overflow-y-auto bg-gray-50 p-4 animate-in">
-            <ShipmentDetails
-              shipment={selectedShipment}
-              onClose={() => setSelectedId(null)}
-            />
-          </div>
-        )}
+          {/* Details overlay on top of map */}
+          {selectedShipment && (
+            <div className="absolute top-4 right-4 w-[400px] max-h-[calc(100%-2rem)] overflow-y-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-200 p-4 animate-in z-10">
+              <ShipmentDetails
+                shipment={selectedShipment}
+                onClose={() => setSelectedId(null)}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
